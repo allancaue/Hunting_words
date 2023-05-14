@@ -2,7 +2,7 @@ g++ main.cpp display.cpp startup.cpp -o caca_palavras
 
 caca_palavras
 
-g++ main.cpp display.cpp -o caca_palavras
+g++ main.cpp display.cpp menu.cpp -o caca_palavras
 
 
 
