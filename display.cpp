@@ -3,19 +3,15 @@
 #include <locale.h>
 #include <time.h>
 
-void display(char letter_list[200])
+void display(char letter_list[10][20])
 {
-    int l = 0;
-
-
-    for (int i = 0; i < 200; i++)
+    for (int i = 0; i < 10; i++)
     {
-        printf(" %c ", letter_list[i]);
-        l++;
-        if(l == 20){
-            printf("\n");
-            l = 0;
+        for (int l = 0; l < 20; l++)
+        {
+            printf(" %c ", letter_list[i][l]);
         }
+        printf("\n");
     }
     
 }
