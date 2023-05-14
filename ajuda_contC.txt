@@ -1,0 +1,10 @@
+g++ main.cpp display.cpp startup.cpp -o caca_palavras
+
+caca_palavras
+
+g++ main.cpp display.cpp -o caca_palavras
+
+
+
+
+random_letters[i] = alphabet[generator[i]];
