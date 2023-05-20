@@ -3,9 +3,9 @@
 #include <locale.h>
 #include <time.h>
 
-void display(char letter_list[10][20]);
+void gameplay(char letter_list[10][20], char word_list[5][10]);
 
-bool menu(char random_letters[10][20])
+bool menu(char random_letters[10][20], char word_slected[5][10])
 {
     int option;
 
@@ -16,7 +16,8 @@ bool menu(char random_letters[10][20])
 
     switch (option){
         case 1:
-            display(random_letters);
+            system("cls");
+            gameplay(random_letters, word_slected);
              system("pause");
              return true;
              break;

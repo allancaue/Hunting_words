@@ -4,7 +4,31 @@ caca_palavras
 
 g++ main.cpp display.cpp menu.cpp -o caca_palavras
 
+g++ main.cpp display.cpp menu.cpp gameplay.cpp -o caca_palavras
+
 
 
 
 random_letters[i] = alphabet[generator[i]];
+
+
+fazer o jogador colocar as palavars e quando for < 10 adicionar letars aleatorias
+
+    if(strcmp( word_right[0], word_copier) == 0)
+        {
+            win_counter++;
+            check_the_win = true;
+            printf("ACERTOU\n\n");
+            for (int i = coordinate[0]; i <= coordinate2[0]; i++)
+            {
+                for (int l = coordinate[1]; l <= coordinate2[1]; l++)
+                {
+                    letter_list[i][l] = '.';
+                }
+                
+            }
+        }
+    else
+        {
+            printf("ERROU\n\n");
+        }
