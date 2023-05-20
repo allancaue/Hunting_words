@@ -109,13 +109,8 @@ void gameplay(char letter_list[10][20], char word_list[5][10])
     sleep(3);
     system("cls");
 
-        
-
-
-        
-        
-
 
     } while (repetition == true);
+    return;
     
 }

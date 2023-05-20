@@ -78,4 +78,5 @@ int main()
 
 
     }while(menu(random_letters, word_slected) == true);
+    return 0;
 }
