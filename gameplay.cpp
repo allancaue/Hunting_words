@@ -14,40 +14,52 @@ void gameplay(char letter_list[10][20], char word_list[5][10])
     bool abacaxi = false,chocolate = false,gato = false,amigo = false,banana = false,
     cachorro = false,danca = false,escola = false,futebol = false,guitarra = false,repetition = true,
     check_the_win = false;
+    bool erro = false;
     do
     {
-        for (int i = 0; i < 10; i++)
-        {
-            word_copier[i] = '\0';
-        }
-
-        printf("Listas de palavars:\n");
-
-        for (int i = 0; i < 5; i++)
-        {
-            for (int l = 0; l < 10; l++)
+        do{
+            system("cls");
+            erro = false;
+            for (int i = 0; i < 10; i++)
             {
-                printf("%c",word_list[i][l]);
-                if (l == 9)
+                word_copier[i] = '\0';
+            }
+
+            printf("Listas de palavars:\n");
+
+            for (int i = 0; i < 5; i++)
+            {
+                for (int l = 0; l < 10; l++)
                 {
-                    printf("\n");
+                    printf("%c",word_list[i][l]);
+                    if (l == 9)
+                    {
+                        printf("\n");
+                    }
+                    
                 }
                 
             }
+            printf("\n\nVoce achou %d de 5\n\n",win_counter);
             
-        }
-        printf("\n\nVoce achou %d de 5\n\n",win_counter);
-        
 
-        display(letter_list);
+            display(letter_list);
 
-        printf("escerva a cordenada(linha coluna), da primeira letra: ");
-        scanf("%d %d", &coordinate[0], &coordinate[1]);
+            printf("escerva a cordenada(linha coluna), da primeira letra: ");
+            scanf("%d %d", &coordinate[0], &coordinate[1]);
 
-        printf("\n\nescerva a cordenada(linha coluna), da utima letra: ");
-        scanf("%d %d", &coordinate2[0], &coordinate2[1]);
+            printf("\n\nescerva a cordenada(linha coluna), da utima letra: ");
+            scanf("%d %d", &coordinate2[0], &coordinate2[1]);
 
-        printf("essa foi a palavara que voce escolheu: ");
+            if(coordinate[0] > 10 || coordinate[1] > 20 || coordinate2[0] > 10 || coordinate2[1] > 20)
+            {
+                printf("\nERRO\n\n");
+                erro = true;
+                system("pause");
+            }
+        }while(erro == true);
+
+        printf("\nessa foi a palavara que voce escolheu: ");
         int c = 0;
         for (int i = coordinate[0]; i <= coordinate2[0]; i++)
         {
